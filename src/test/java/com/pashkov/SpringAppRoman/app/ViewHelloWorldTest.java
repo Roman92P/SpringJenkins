@@ -14,14 +14,13 @@ import org.springframework.test.web.servlet.MockMvc;
 @AutoConfigureMockMvc
 @WithMockUser
 class ViewHelloWorldTest {
-	
+
 	@Autowired
 	MockMvc mockMvc;
 
 	@Test
 	void testViewHello() throws Exception {
-		mockMvc.perform(get("/hello"))
-		.andExpect(content().string("Hello From Jenkins Spring app"));
+		mockMvc.perform(get("/hello")).andExpect(content().string("Hello From Jenkins Spring app"));
 	}
 
 }
